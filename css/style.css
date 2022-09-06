@@ -1,6 +1,7 @@
 :root {
   --color-accented: #2196f3;
   --color-normal: #757575;
+  --color-gray: #afb1b8;
   --color-strong: #212121;
   --color-background1: white;
   --color-background2: #2f303a;
@@ -61,13 +62,13 @@
   align-items: center;
   justify-content: left;
 }
-.container-left-wrap {
+/* .container-left-wrap {
   text-align: left;
   width: 1200px;
   margin-left: 215px;
   margin-right: 215px;
-  /* background-color: fuchsia; */
-}
+  background-color: fuchsia;
+} */
 
 body {
   font-family: "Roboto", sans-serif;
@@ -102,11 +103,6 @@ ul {
 header {
   height: 80px;
 }
-#contact {
-  /* footer */
-  height: 252px;
-  background-color: var(--color-background2);
-}
 .company-name {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
@@ -123,8 +119,57 @@ header {
 .link1 {
   font-weight: 500;
   color: var(--color-strong);
+  fill: var(--color-strong);
+}
+.icon {
+  margin-right: 10px;
+}
+.icon-big {
+  margin-top: 25px;
+}
+.icon-big-background {
+  background-color: #f5f4fa;
+  height: 120px;
+  margin-bottom: 30px;
+}
+.icons-socials-bar {
+  display: flex;
+  gap: 10px;
+}
+.icon-socials {
+  fill: var(--color-normal);
+  /* border: 2px solid red; */
+  border-radius: 50%;
+  background-color: var(--color-background1);
+}
+.icon-socials:hover,
+.icon-socials:focus {
+  fill: var(--color-background1);
+  /* border: 1px solid var(--color-accented); */
+  background-color: var(--color-accented);
 }
 
+.icon-clients {
+  fill: var(--color-normal);
+  width: 170;
+  height: 92;
+  padding: 16px 32px;
+  /* background-color: var(--color-background1); */
+  border: 1px solid var(--color-gray);
+}
+.icon-clients:hover,
+.icon-clients:focus {
+  fill: var(--color-accented);
+  /* background-color: var(--color-background1); */
+  border: 1px solid var(--color-accented);
+}
+.icon-clients > svg:hover,
+.icon-clients > svg:focus {
+  fill: var(--color-accented);
+}
+.icon-clients > svg {
+  fill: var(--color-normal);
+}
 .button1:hover,
 .button1:focus {
   background-color: var(--color-accented);
@@ -132,12 +177,10 @@ header {
   cursor: pointer;
 }
 
-.link1:hover {
-  color: var(--color-accented);
-}
-/* */
+.link1:hover,
 .link1:focus {
   color: var(--color-accented);
+  fill: var(--color-accented);
 }
 
 .link2 {
@@ -164,7 +207,7 @@ header {
   margin-bottom: 4px;
   line-height: 200%;
 }
-.hq-address {
+.text-white {
   color: var(--color-background1);
 }
 .upper-article {
@@ -219,6 +262,7 @@ nav .link1 {
 }
 .personel-card {
   font-size: 16px;
+  background-color: var(--color-background1);
 }
 .padding-30 {
   padding: 20px;
@@ -237,19 +281,22 @@ nav .link1 {
   min-height: 50px;
 }
 
-footer > :nth-child(n) > :nth-child(n) {
+footer {
+  /* footer */
+  height: 252px;
+  background-color: var(--color-background2);
+}
+#contact > :nth-child(n) {
   display: flex;
   padding-top: 9px;
   margin: 0;
 }
-footer > :nth-child(n) > :first-child {
+#contact > :first-child {
   display: flex;
-  /* padding: 9px 0; */
   padding-top: 60px;
   padding-bottom: 20px;
-  /* margin: 10px; */
 }
-footer > :nth-child(n) > :last-child {
+#contact > :last-child {
   display: flex;
 
   padding-bottom: 60px;
@@ -267,4 +314,23 @@ footer > :nth-child(n) > :last-child {
 .strong-inverted-color {
   color: var(--color-background1);
 }
-/* */ ;
+/* */
+
+.footer-flex {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 70px;
+
+  font-weight: 700;
+}
+
+.margin-bottom-20 {
+  margin-bottom: 20px;
+  margin-top: 60px;
+}
+
+footer .icon-socials {
+  background-color: rgba(255, 255, 255, 0.1);
+  fill: var(--color-background1);
+}
